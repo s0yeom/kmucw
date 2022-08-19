@@ -17,7 +17,8 @@ let resNav = function() {
     })
   }
   else {
-    $("#headerWrap").css({ height: 100 })
+    $(".navBtn").css({ backgroundImage: "url(images/navBtn.png)" });
+    $("#headerWrap").css({ height: 100 });
     $("#gnbList > li > a").on("mouseenter", function() {
       $("#headerWrap").stop().animate({ height: 500 }, 300);
     })
@@ -64,3 +65,7 @@ $(".prev").on("click", function() {
   $("#introList").prepend($("#introList li:last"));
   $(".writer:eq(0)").addClass("on");
 })
+
+let mainChange = function() {
+
+}
