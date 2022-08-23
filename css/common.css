@@ -8,7 +8,6 @@ a { text-decoration: none; }
 .hidden { position: absolute; text-indent: -9999px; }
 
 body { width: 100%;
-      min-width: 600px;
       font-family: 'Noto Sans KR', sans-serif; }
 
 .mobile { display: none; }
@@ -90,13 +89,13 @@ footer a { color: #fff; }
   #gnb { width: 780px; padding-top: 131px;
           margin: 0 auto; }
   #gnbList { flex-flow: column; justify-content: space-evenly; }
-  #gnbList li { display: flex; }
-  #gnbList > li > a { width: 150px; height: 100px; line-height: 100px;
+  #gnbList li { display: flex; justify-content: flex-start; }
+  #gnbList > li > a { width: 150px; min-width: 100px; height: 100px; line-height: 100px;
                       margin: 10px 0; }
 
-  .snb { display: flex; padding-left: 30px; }
-  .snb li { line-height: 40px; }
-  .snb li a { text-align: center; width: 150px; }
+  .snb { display: flex; padding-left: 30px; flex-wrap: wrap; }
+  .snb li { line-height: 40px; text-align: left; }
+  .snb li a { width: 150px; }
 }
 
 
@@ -136,7 +135,7 @@ footer a { color: #fff; }
 
   .navBtn { right: 30px; }
 
-  #siteWrap { top: 120px; right: 70px; }
+  #siteWrap { top: 120px; }
   #siteWrap select { width: 150px; }
 
   #snsWrap ul { position: absolute; left: 70px; }
@@ -147,7 +146,17 @@ footer a { color: #fff; }
 
 
 @media screen and (max-width: 730px) {
-  #gnb { width: 570px; }
+  #gnb { width: 100%; }
 
   .snb li { padding-left: 10px; }
+
+  .footer { padding: 150px 30px 60px; }
+
+  #siteWrap { right: 30px; }
+
+  #snsWrap ul { left: 30px; }
+}
+
+@media screen and (max-width: 500px) {
+
 }

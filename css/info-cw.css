@@ -23,16 +23,25 @@
 #infoList li a.on { color: #d30f70; }
 
 #infoWrap1 { position: relative; width: 100%;
-              margin: 80px auto 200px; }
+              margin: 80px auto 100px; }
 
 #cwWrap { display: flex; }
-#cwWrap h3 { position: absolute; font-size: 60px; }
-#cwWrap h3::after { content: ""; position: absolute;
-                    width: 15px; height: 15px; background: #d30f70; }
 
 .cwInfo1 { width: 40%; order: 1;
-            margin: 0 auto; }
+            margin: 50px auto 0; }
+.cwInfo1 h3 { font-size: 48px; margin-bottom: 50px; }
+.cwInfo1 h3::after { content: ""; position: absolute;
+                    width: 15px; height: 15px; background: #d30f70; }
+.cwInfo1 p { margin: 0 0 30px; }
 
-/* .pcImg { width: 50%; } */
+.pcImg { width: 900px; }
 
+.infoBg { width: 1700px; height: 300px; margin: 0 auto 100px;
+          background: url(../images/subBg.png) no-repeat center; }
 .infoBg span { position: absolute; left: -9999px; }
+
+@media screen and ( max-width: 1720px ) {
+  .cwInfo1 { width: 35%; margin: 30px auto 0; }
+
+  .pcImg { width: 850px; }
+}

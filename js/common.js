@@ -51,7 +51,8 @@ let eduSliderAuto = function() {
 }
 setInterval(eduSliderAuto, 5000);
 
-$(".cBtn").on("click", function() {
+$(".cBtn").on("click", function(e) {
+  e.preventDefault();
   let cBtn = $(this, "a").text();
   $(".cBtn").removeClass("on");
   $(this).addClass("on");
@@ -61,6 +62,9 @@ $(".cBtn").on("click", function() {
 
 // $("#introList").slick(); // ??
 
+$(".pageBtn a").on("click", function(e) {
+  e.preventDefault();
+})
 $(".next").on("click", function() {
   $(".writer").removeClass("on");
   $("#introList").append($("#introList li:first"));
@@ -80,4 +84,4 @@ let mainChange = function() {
                                                       .css({ opacity: 0 });
                             });
 }
-setInterval(mainChange, 10000);
+setInterval(mainChange, 7000);
