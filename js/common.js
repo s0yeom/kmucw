@@ -1,22 +1,28 @@
-$("a").on("click", function(e) {
-  e.preventDefault();
-})
+// $("a").on("click", function(e) {
+//   e.preventDefault();
+// })
 
 let mobileNav = window.matchMedia('screen and (max-width: 1500px)')
 let pcNav = window.matchMedia('screen and (min-width: 1501px)')
+let state = 1;
 let resNav = function() {
   if ( mobileNav.matches ) {
     $("#gnbList > li > a").off()
     $("#header").off();
-    $(".navBtn").toggle(function() {
-      $("#headerWrap").stop().animate({ height: 850 }, 300);
-      $(".navBtn").css({ backgroundImage: "url(images/navBtnX.png)" });
-    }, function() {
-      $("#headerWrap").stop().animate({ height: 100 }, 300);
-      $(".navBtn").css({ backgroundImage: "url(images/navBtn.png)" });
-    })
+    if( state == 1 ) {
+      $(".navBtn").toggle(function() {
+        state = 0;
+        $("#headerWrap").stop().animate({ height: 850 }, 300);
+        $(".navBtn").css({ backgroundImage: "url(images/navBtnX.png)" });
+      }, function() {
+        state = 1;
+        $("#headerWrap").stop().animate({ height: 100 }, 300);
+        $(".navBtn").css({ backgroundImage: "url(images/navBtn.png)" });
+      })
+    }
   }
   else {
+    state = 1;
     $(".navBtn").css({ backgroundImage: "url(images/navBtn.png)" });
     $("#headerWrap").css({ height: 100 });
     $("#gnbList > li > a").on("mouseenter", function() {
@@ -67,5 +73,11 @@ $(".prev").on("click", function() {
 })
 
 let mainChange = function() {
-
+  $("#mainBgList li:last").addClass("active")
+                          .css({ opacity: 0 }).animate({ opacity: 1 }, 1000, function() {
+                              $("#mainBgList").append($("#mainBgList li:first"));
+                              $("#mainBgList li:last").removeClass("active")
+                                                      .css({ opacity: 0 });
+                            });
 }
+setInterval(mainChange, 10000);

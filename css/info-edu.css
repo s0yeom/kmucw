@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+#informationEdu { width: 100%; }
+
+.mImg { display: none; }
+
+#infoTitleBg { width: 100%; height: 300px; position: relative;
+              background: url(../images/infoTitle.png) no-repeat center / cover; }
+#infoTitleBg::after { content: ""; position: absolute; top: 0; left: 0;
+                      width: 100%; height: 100%;
+                      background: rgba(0, 0, 0, 0.4); }
+#infoTitleBg span { position: absolute; left: -9999px; }
+#infoTitleBg h2 { font-size: 60px; color: #fff;
+                  position: relative; z-index: 9;
+                  text-align: center; line-height: 300px; }
+
+#infoTitle { width: 1200px; height: 150px; margin: 0 auto; position: relative; }
+
+#infoList { display: flex; justify-content: space-between; width: 500px;
+            position: absolute; top: 70px; left: calc(50% - 250px); }
+#infoList li { margin: 0 30px; }
+#infoList li a { font-size: 20px; color: #000; }
+#infoList li a.on { color: #d30f70; }
+
+#eduObj { width: 1620px; margin: 100px auto 200px;
+          display: flex; }
+#eduObj img { opacity: 0; }
+#eduObj img.pcImg { width: 700px; height: 800px; }
+
+#eduInfo { order: 1; width: 45%; position: relative;
+            margin-left: 100px; }
+#eduInfo h3 { position: absolute; top: 90px;
+              font-size: 48px; opacity: 0; }
+#eduInfo h3::after { content: ""; position: absolute;
+                      width: 15px; height: 15px; background: #d30f70; }
+
+.info { position: absolute; top: 220px; opacity: 0; }
+.info p { margin: 30px 0; }
+
+.circle { position: absolute; left: calc(50% - 300px); bottom: 90px; opacity: 0; }
+.circle ul { display: flex; }
+.circle ul li { width: 150px; height: 150px; margin: 0 25px;
+                text-align: center; }
+.circle ul li a { width: 150px; height: 150px;
+                  display: table-cell; vertical-align: middle;
+                  border: 1px solid #d30f70; border-radius: 50%;
+                  color: #000; }
+.circle ul li:hover a { background: #d30f70;
+                        color: #fff; font-size: 20px; font-weight: 500; }
+
+
+@media screen and ( max-width: 1720px ) {
+  #eduObj { width: 1220px; }
+  #eduObj img.pcImg { width: 600px; height: 700px; }
+
+  #eduInfo h3 { top: 70px; }
+
+  .info { top: 180px; }
+  .info p { margin: 20px 0; }
+
+  .circle { left: calc(50% - 240px); bottom: 70px; }
+  .circle ul li { width: 120px; height: 120px; margin: 0 20px; }
+  .circle ul li a { width: 120px; height: 120px; }
+  .circle ul li:hover a { font-size: 18px; }
+}
+
+
+@media screen and ( max-width: 1500px ) {
+  #eduObj { width: 1000px; }
+  #eduObj img.pcImg { width: 500px; height: 600px; }
+
+  #infoTitle { width: 1000px; }
+
+  #eduInfo { margin-left: 70px; }
+  #eduInfo h3 { font-size: 36px; top: 60px; }
+  #eduInfo h3::after { width: 12px; height: 12px; }
+
+  .info { top: 130px; }
+  .info p { margin: 20px 0; font-size: 15px; }
+
+
+  .circle { left: calc(50% - 210px); bottom: 60px; }
+  .circle ul li { width: 100px; height: 100px; margin: 0 20px; }
+  .circle ul li a { width: 100px; height: 100px; }
+  .circle ul li:hover a { font-size: 15px; }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .pcImg { display: none; }
+  .mImg { display: block; }
+
+  #infoTitleBg { height: 200px; }
+  #infoTitleBg h2 { line-height: 200px; font-size: 48px; }
+
+  #infoTitle { width: 800px; }
+
+  #infoList { top: 60px; left: calc(50% - 220px); width: 440px; }
+  #infoList li a { font-size: 18px; color: #000; }
+
+  #eduObj { flex-flow: column; width: 800px; margin: 50px auto 600px; }
+
+  #eduInfo { width: 55%; margin: 0 40px; }
+  #eduInfo h3 { top: 80px; }
+
+  .info { top: 150px; }
+  .info p { margin: 30px 0; }
+
+  .circle { left: calc(50% + 350px); bottom: -480px; }
+  .circle ul { flex-flow: column; }
+  .circle ul li { margin: 10px 0; width: 120px; height: 120px; }
+  .circle ul li a { width: 120px; height: 120px; }
+}
+
+
+@media screen and (max-width: 980px) {
+  #infoTitle { width: 600px; }
+
+  #infoList { width: 360px; left: calc(50% - 180px); }
+  #infoList li { margin: 0 20px; }
+  #infoList li a { font-size: 16px; }
+
+  #eduObj { width: 600px; margin: 30px auto 650px; }
+
+  #eduInfo { width: 90%; margin: 0 auto; }
+  #eduInfo h3 { font-size: 30px; width: 160px; text-align: center;
+                left: calc(50% - 80px); top: 60px; }
+
+  .info { top: 120px; }
+  .info p { margin: 20px 0; font-size: 14px; }
+
+  .circle { left: calc(50% - 240px); bottom: -500px; }
+  .circle ul { flex-flow: row; }
+  .circle ul li { margin: 0 20px; width: 120px; height: 120px; }
+  .circle ul li a { width: 120px; height: 120px; }
+}
+
+
+@media screen and (max-width: 730px) {
+  #eduObj { width: 500px; margin: 30px auto 650px; }
+
+  .circle { left: calc(50% - 210px); bottom: -500px; }
+  .circle ul li { width: 100px; height: 100px; margin: 0 20px; }
+  .circle ul li a { width: 100px; height: 100px; font-size: 14px; }
+}

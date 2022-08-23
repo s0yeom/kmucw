@@ -1,0 +1,352 @@
+@charset "UTF-8";
+
+#title { height: 800px; background: #fff; position: relative; }
+
+#mainBgList li { position: absolute; right: 0;
+                  width: 83%; height: 800px;
+                  background: no-repeat center / cover;
+                  border-top-left-radius: 250px; }
+#mainBgList li::before { content: ""; position: absolute; top: 0; left: 0;
+                          width: 100%; height: 100%;
+                          background: rgba(255, 255, 255, 0.2); }
+#mainBgList span { position: absolute; left: -9999px; }
+#mainBgList .mainBg1 { background-image: url(../images/title1.png); }
+#mainBgList .mainBg2 { background-image: url(../images/title2.png); opacity: 0; }
+#mainBgList .active { z-index: 9; }
+
+#titleText h3 { position: absolute; left: 120px; top: 240px;
+                font-size: 72px; z-index: 10;
+                text-shadow: -1px -1px 2px rgba(250, 250, 250, 0.2),
+                              1px 1px 2px rgba(250, 250, 250, 0.2); }
+#titleText p { position: absolute; left: 120px; top: 200px;
+              font-weight: 500; font-size: 36px; z-index: 10;
+              text-shadow: -1px -1px 2px rgba(250, 250, 250, 0.2),
+                            1px 1px 2px rgba(250, 250, 250, 0.2); }
+#titleText p span { color: #d30f70; }
+#titleText a { position: absolute; left: 150px; top: 380px;
+              font-size: 18px; color: #000; z-index: 10;
+              text-shadow: -1px -1px 2px rgba(250, 250, 250, 0.2),
+                            1px 1px 2px rgba(250, 250, 250, 0.2); }
+#titleText a::before { content: ""; position: absolute; top: 0; left: -10px;
+                      width: 200px; height: 30px; transition: 0.5s;
+                      background: url(../images/moreArrow.png) no-repeat; }
+#titleText a:hover::before { left: 30px; }
+#titleText a::after { content: "";
+                    position: absolute; top: -5px; right: -15px;
+                    width: 10px; height: 10px; background: #d30f70; }
+
+#mainBanner { overflow: hidden; }
+
+#educationObj { width: 300%; height: 450px; position: relative; }
+#educationObj::before { content: ""; position: absolute; top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background: rgba(0, 0, 0, 0.5); }
+
+#educationObj ul { display: flex; }
+#educationObj .eduSlider { width: 100%; height: 450px; text-align: right;
+                            background: no-repeat center / cover; }
+#educationObj .eduSlider a { position: relative; top: 180px; right: 400px; color: #fff;
+                              font-size: 30px; line-height: 30px; text-align: right; }
+#educationObj .eduSlider span { font-size: 48px; font-weight: 600; line-height: 80px; }
+#educationObj .eduSlider a::before { content: "교육 목표"; position: absolute;
+                                    top: -60px; right: 0px;
+                                    color: #fff; font-size: 20px; font-weight: 300; }
+#educationObj .eduSlider a::after { content: ""; position: absolute;
+                                  top: -30px; right: 0px;
+                                  width: 180px; height: 1px; background: #fff; }
+
+#educationObj .eduSlider1 { background-image: url(../images/eduSlider1.png); }
+#educationObj .eduSlider2 { background-image: url(../images/eduSlider2.png); }
+#educationObj .eduSlider3 { background-image: url(../images/eduSlider3.png); }
+
+#careerWrap { position: relative; width: 100%; height: 800px; }
+
+#careerIntro .moreL { position: absolute; top: 125px; right: 200px;
+                    color: #000; font-size: 18px; }
+#careerIntro .moreL::after { content: ""; display: block; width: 10px; height: 15px;
+                          background: url(../images/moreBtn.png) no-repeat center;
+                          position: absolute; top: 8px; right: -16px; }
+
+#careerIntro h3 { position: absolute; top: 70px; z-index: 99;
+                  width: 35%; box-sizing: border-box;
+                  text-align: right; padding-right: 80px;
+                  font-size: 48px; font-weight: 600; }
+
+#introTitle { width: 35%; height: 830px;
+              position: absolute; top: -30px; left: 0;
+              background: url(../images/bgCareer.png) no-repeat center / cover;
+              border-top-right-radius: 100px; }
+#introTitle::before { content: ""; position: absolute; top: 0; left: 0;
+                      width: 100%; height: 100%; border-top-right-radius: 100px;
+                      background: rgba(255, 255, 255, 0.2); }
+
+#introTitle p { position: relative; top: 190px; right: 80px;
+                  text-align: right; font-size: 20px; line-height: 24px; }
+
+#introWrap { position: relative; }
+
+#introWrap .writer { position: absolute; left: 42%; opacity: 0; }
+#introWrap .writer a { color: #000; }
+#introWrap .writer dt { position: absolute; top: 180px; left: 480px;
+                        width: 140px; height: 140px; background: #d30f70;
+                        color: #fff; font-size: 24px;
+                        padding: 20px; }
+#introWrap .writer dd:nth-child(2) { position: absolute; width: 140px;
+                                    top: 240px; left: 500px; color: #fff;
+                                    font-size: 18px; font-weight: 400; }
+#introWrap .writer dd:nth-child(3) { position: absolute; width: 400px;
+                                    top: 400px; left: 480px;
+                                    font-size: 30px; font-weight: 600; }
+#introWrap .writer dd:nth-child(4) { position: absolute; width: 400px;
+                                    top: 470px; left: 480px;
+                                    font-size: 18px; line-height: 20px; }
+#introWrap .writer img { position: relative; top: 125px;
+                          box-shadow: -1px -1px 2px rgba(105, 105, 105, 0.3),
+                                      1px 1px 2px rgba(105, 105, 105, 0.3),
+                                      3px 3px 5px rgba(105, 105, 105, 0.3); }
+
+#intro1.on { opacity: 1; }
+#intro2.on { opacity: 1; }
+#intro3.on { opacity: 1; }
+
+.pageBtn { display: none; }
+.pageBtn a { position: absolute; top: calc(50% - 20px);
+            display: block; width: 20px; height: 39px;
+            text-indent: -9999px; }
+.pageBtn a.prev { background: url(../images/prevBtn.png) no-repeat; }
+.pageBtn a.next { background: url(../images/nextBtn.png) no-repeat; }
+
+#cBtnWrap { position: absolute; top: 620px; left: calc(42% + 500px); }
+#careerBtn { display: flex; }
+#careerBtn .cBtn { width: 15px; height: 15px;
+                    background: #c8c8c8; border-radius: 50%;
+                    margin: 0 10px; }
+#careerBtn .cBtn a { display: block; text-indent: -9999px; }
+#careerBtn .cBtn.on { background: #000; }
+
+#newsWrap { position: relative;
+            background: #fff; }
+
+#newsTitle { width: 100%; height: 250px; position: absolute; top: 500px; left: 0;
+              background: #fff url(../images/newsTitle2.png) no-repeat right top;
+              display: flex; justify-content: center; align-items: center;
+              flex-flow: column; }
+#newsTitle::before { content: ""; width: 100%; height: 100%;
+                      position: absolute; top: 0; left: 0;
+                      background: url(../images/newsTitle1.png) no-repeat left bottom; }
+#newsTitle h2 { font-size: 48px; font-weight: 600; z-index: 99; }
+#newsTitle p { font-size: 24px; z-index: 99; }
+
+#contest { width: 100%; height: 500px; position: absolute; top: 0; left: 0;
+            display: flex; }
+#contest article { display: flex; flex-flow: column;
+                    justify-content: center; align-items: center;
+                    width: 50%; position: relative; z-index: 90; }
+#contest article::after { content: ""; position: absolute; top: 0; left: 0;
+                          width: 100%; height: 100%;
+                          background: rgba(0, 0, 0, 0.4);
+                          transition: 0.2s; }
+#contest article:hover::after { background: rgba(210, 15, 112, 0.5); }
+#contest article h4 { font-size: 40px; font-weight: 600; color: #fff; z-index: 99; }
+#contest article p { font-size: 20px; color: #fff; line-height: 18px; z-index: 99; }
+#contest article a { display: block; width: 130px; z-index: 99;
+                      text-align: center; line-height: 40px; color: #fff;
+                      border: 2px solid #fff; border-radius: 20px;
+                      margin-top: 30px; }
+
+#con_in { background: url(../images/contest1.png) no-repeat center / cover; }
+#con_out { background: url(../images/contest2.png) no-repeat center / cover; }
+
+.news { width: 1500px; position: relative;
+        margin: 0 auto; padding: 800px 0 100px;
+        display: flex; justify-content: space-evenly; }
+.news a { color: #000; }
+.news h3 { font-size: 30px; padding: 0 0 18px 20px;
+            border-bottom: 3px solid #000; }
+.news dl { width: 650px; position: relative;
+            padding: 35px 20px; margin: 0 auto;
+            border-bottom: 1px solid #c8c8c8; }
+.news dt { font-size: 24px; font-weight: 600;
+            width: 545px; display: block; padding-bottom: 25px;
+            white-space: nowrap; overflow: hidden;
+            text-overflow: ellipsis; }
+.news dd { padding: 0 10px; }
+.news span { font-size: 16px; position: absolute; top: 45px; right: 20px; }
+
+.news section { position: relative; }
+.news .moreN { position: absolute; top: 15px; right: 20px;
+                width: 32px; height: 32px; text-indent: -9999px; }
+.news .moreN::before { content: ""; position: absolute; top: calc(50% - 1px); left: 0;
+                        border-top: 2px solid #c8c8c8; width: 32px; }
+.news .moreN::after { content: ""; position: absolute; top: 0; left: calc(50% - 1px);
+                        border-left: 2px solid #c8c8c8; height: 32px; }
+
+#notice, #event { width: 700px; margin: 80px 0 100px 0; }
+#notice { margin-right: 50px; }
+#event { margin-left: 50px; }
+
+
+@media screen and (max-width: 1720px) {
+  #educationObj .eduSlider a { right: 20%; }
+
+  #careerIntro h3 { padding-right: 4%; }
+  #introTitle p { right: 12%; font-size: 18px; line-height: 22px; }
+
+  #careerIntro .moreL { right: 8%; }
+
+  #introWrap .writer { left: 40%; }
+  #introWrap .writer dt { left: 460px; }
+  #introWrap .writer dd:nth-child(2) { left: 480px }
+  #introWrap .writer dd:nth-child(3) { left: 460px; }
+  #introWrap .writer dd:nth-child(4) { left: 460px; width: 90%; }
+
+  #cBtnWrap { left: calc(42% + 460px); }
+
+  #newsTitle { background-size: 25%; }
+  #newsTitle::before { background-size: 20%; }
+
+  .news { width: 85%; }
+  .news h3 { font-size: 28px; padding: 0 0 16px 20px; }
+  .news dl { width: 95%; padding: 30px 15px; }
+  .news dt { font-size: 21px; width: 75%; padding-bottom: 20px; }
+  .news span { font-size: 14px; top: 40px; }
+
+  .news .moreN { top: 10px; }
+  .news .moreN::before { width: 30px; }
+  .news .moreN::after { height: 30px; }
+
+  #notice, #event { width: 45%; }
+  #notice { margin-right: 30px; }
+  #event { margin-left: 30px; }
+}
+
+
+@media screen and (max-width: 1500px) {
+  #educationObj .eduSlider { text-align: center; }
+  #educationObj .eduSlider a { right: 0; }
+  #educationObj .eduSlider a::before { right: calc(50% - 65px); }
+  #educationObj .eduSlider:nth-child(2) a::before { right: calc(50% - 30px); }
+  #educationObj .eduSlider a::after { width: 300px; right: calc(50% - 172px); }
+  #educationObj .eduSlider:nth-child(2) a::after { right: calc(50% - 138px); }
+
+  #careerIntro h3 { top: 50px;
+                    width: 100%; padding: 0;
+                    text-align: center; }
+
+  #introTitle { width: 52%; height: 600px; top: 230px; }
+  #introTitle p { left: -9999px; }
+
+  #introWrap .writer { top: 20px; left:calc(50% - 425px);
+                        width: 45%; }
+  #introWrap .writer dt { left: 500px; }
+  #introWrap .writer dd:nth-child(2) { left: 520px; }
+  #introWrap .writer dd:nth-child(3) { left: 500px; width: 70%; }
+  #introWrap .writer dd:nth-child(4) { left: 500px; width: 60%; }
+  #introWrap .writer img { top: 155px; }
+
+  .pageBtn a.prev { left: 3%; }
+  .pageBtn a.next { right: 3%; }
+
+  #cBtnWrap { top: 640px; left: 80%; }
+
+  #careerIntro .moreL { right: 10%; }
+}
+
+
+@media screen and (max-width: 1200px) {
+  #mainBgList li { width: 100%; border-top-left-radius: 0; }
+
+  #titleText h3 { font-size: 60px; top: 230px; left: 10%; }
+  #titleText p { font-size: 28px; left: 10%; }
+  #titleText a { left: 12%; top: 350px }
+
+  #educationObj .eduSlider a { font-size: 28px; }
+
+  #careerIntro h3 { font-size: 40px; }
+
+  #introWrap .writer dt { width: 120px; height: 120px;
+                          font-size: 20px; top: 200px; }
+  #introWrap .writer dd:nth-child(2) { font-size: 16px; top: 250px; }
+  #introWrap .writer dd:nth-child(3) { font-size: 28px; }
+  #introWrap .writer dd:nth-child(4) { font-size: 16px; top: 460px; }
+
+  #newsTitle h2 { font-size: 40px; }
+
+  .news { width: 80%; justify-content: flex-start;
+          flex-flow: column; }
+
+  #notice, #event { width: 90%; margin: 40px auto 40px; }
+}
+
+
+@media screen and (max-width: 980px) {
+  #title { height: 500px; }
+
+  #mainBgList li { height: 500px; }
+
+  #titleText h3 { font-size: 40px; width: 100%; text-align: center;
+              left: 0; top: 180px; }
+  #titleText p { font-size: 18px; font-weight: 400;
+              left: 0; top: 160px; width: 100%; text-align: center; }
+  #titleText a { font-size: 14px; left: calc(50% - 60px); top: 280px;
+                width: 120px; height: 25px; line-height: 25px; text-align: center;
+                border: 1px solid #000; text-shadow: none; }
+  #titleText a:hover { color: #d30f70;
+                        border: 1px solid #d30f70; }
+  #titleText a::before { display: none; }
+  #titleText a::after { display: none; }
+
+  #educationObj { height: 280px; }
+  #educationObj .eduSlider a { font-size: 16px; line-height: 24px;
+                                top: 120px; }
+  #educationObj .eduSlider span { font-size: 28px; line-height: 50px; }
+  #educationObj .eduSlider a::before { font-size: 13px;
+                                        right: calc(50% - 35px); }
+  #educationObj .eduSlider:nth-child(2) a::before { right: calc(50% - 18px); }
+  #educationObj .eduSlider a::after { width: 200px; right: calc(50% - 113px); }
+  #educationObj .eduSlider:nth-child(2) a::after { right: calc(50% - 92px); }
+
+  #careerWrap { height: 600px; }
+
+  #careerIntro h3 { font-size: 28px; }
+  #careerIntro .moreL { top: 100px; font-size: 16px; }
+  #careerIntro .moreL::after { top: 5px; }
+
+  #introTitle { top: 200px; width: 45%; }
+
+  #introWrap .writer { left: calc(50% - 250px); }
+  #introWrap .writer dt { width: 100px; height: 100px;
+                          font-size: 18px; top: 130px; left: 300px; }
+  #introWrap .writer dd:nth-child(2) { font-size: 14px;
+                                        top: 180px; left: 320px;  }
+  #introWrap .writer dd:nth-child(3) { font-size: 22px;
+                                        top: 300px; left: 300px; }
+  #introWrap .writer dd:nth-child(4) { font-size: 12px; line-height: 16px;
+                                        top: 355px; left: 300px; }
+  #introWrap .writer img { width: 250px; height: 350px;
+                          top: 115px; left: ; }
+
+  .pageBtn { display: block; }
+
+  #cBtnWrap { display: none; }
+
+  #newsTitle { height: 200px; top: 300px; }
+  #newsTitle h2 { font-size: 36px; }
+  #newsTitle p { font-size: 20px; }
+
+  #contest { height: 300px; }
+  #contest article h4 { font-size: 28px; }
+  #contest article p { font-size: 16px; }
+  #contest article a { font-size: 14px; }
+
+  .news { padding: 550px 0 100px; }
+  .news h3 { font-size: 28px; }
+  .news dt { font-size: 20px; }
+  .news dd { font-size: 15px; }
+}
+
+
+@media screen and (max-width: 730px) {
+  #introWrap .writer dd:nth-child(3) { font-size: 18px; }
+  #introWrap .writer dd:nth-child(4) { top: 345px; }
+}
