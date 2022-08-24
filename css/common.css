@@ -63,7 +63,7 @@ footer a { color: #fff; }
 
 #snsWrap {  }
 #snsWrap ul { display: flex; position: absolute; top: 110px; right: 210px; }
-#snsWrap ul li { width: 40px; margin-left: 25px; background: no-repeat center; }
+#snsWrap ul li { width: 40px; min-width: 40px; margin-left: 25px; background: no-repeat center; }
 #snsWrap ul li a { display: block; height: 30px; text-indent: -9999px; }
 #snsWrap ul li:nth-child(1) { background-image: url(../images/sns1.png); }
 #snsWrap ul li:nth-child(2) { background-image: url(../images/sns2.png); }
@@ -125,8 +125,6 @@ footer a { color: #fff; }
 
   #gnb { width: 610px; }
 
-  #gnbList {}
-  #gnbList li {}
   #gnbList > li > a { width: 100px; }
 
   .snb { }
@@ -158,5 +156,24 @@ footer a { color: #fff; }
 }
 
 @media screen and (max-width: 500px) {
+  #lnb ul li a { font-size: 12px; }
 
+  #gnb { padding-top: 101px; }
+
+  #gnbList li {  }
+  #gnbList > li > a { font-size: 16px; height: 80px; line-height: 80px; }
+
+  .snb li { line-height: 30px; }
+  .snb li a { font-size: 14px; }
+
+  .footer { padding: 180px 10px 60px; }
+
+  #nWrap { height: 100px; }
+  #nWrap ul { flex-flow: column; right: 10px; top: 10px; }
+  #nWrap ul li { text-align: right; }
+  #nWrap ul li a { font-size: 14px; line-height: 16px; }
+
+  #siteWrap { position: absolute; left: 10px; top: 190px; }
+
+  #snsWrap ul { left: 10px; top: 150px; }
 }

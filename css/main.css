@@ -236,7 +236,7 @@
   #introTitle { width: 52%; height: 600px; top: 230px; }
   #introTitle p { left: -9999px; }
 
-  #introWrap .writer { top: 20px; left:calc(50% - 425px);
+  #introWrap .writer { top: 20px; left: calc(50% - 425px);
                         width: 45%; }
   #introWrap .writer dt { left: 500px; }
   #introWrap .writer dd:nth-child(2) { left: 520px; }
@@ -349,4 +349,52 @@
 @media screen and (max-width: 730px) {
   #introWrap .writer dd:nth-child(3) { font-size: 18px; }
   #introWrap .writer dd:nth-child(4) { top: 345px; }
+}
+
+
+@media screen and (max-width: 500px) {
+  #title { height: 400px; }
+
+  #mainBgList li { height: 400px; }
+
+  #titleText h3 { font-size: 30px; top: 150px; }
+  #titleText p { font-size: 16px; top: 130px; }
+  #titleText a { top: 230px; }
+
+  #educationObj { height: 230px; }
+  #educationObj .eduSlider a { font-size: 14px; line-height: 16px; top: 100px; }
+  #educationObj .eduSlider span { font-size: 24px; line-height: 50px; }
+
+  #careerWrap { height: 550px; }
+
+  #introTitle { top: 120px; width: 55%; }
+
+  #careerIntro h3 { font-size: 24px; }
+  #careerIntro .moreL { font-size: 15px; }
+  #careerIntro .moreL::after { top: 3px; }
+
+  #introWrap .writer { left: -240px; top: 30px; width: 70%; }
+  #introWrap .writer dt { left: calc(50% + 220px); }
+  #introWrap .writer dd:nth-child(2) { left: calc(50% + 240px); }
+  #introWrap .writer dd:nth-child(3) { font-size: 20px; width: 100%; top: 310px; }
+  #introWrap .writer dd:nth-child(4) { width: 100%; top: 360px; }
+  #introWrap .writer img { display: none; }
+
+  #newsTitle { height: 150px; top: 250px; }
+  #newsTitle h2 { font-size: 30px; }
+  #newsTitle p { font-size: 18px; }
+
+  #contest { height: 250px; }
+  #contest article h4 { font-size: 24px; }
+  #contest article p { font-size: 14px; }
+  #contest article a { width: 100px; line-height: 30px; }
+
+  .news { padding: 420px 0 100px; width: 90%; }
+  .news h3 { font-size: 24px; padding: 0 0 10px 15px; }
+  .news dl { width: 80%; padding: 20px 15px 30px; }
+  .news dt { font-size: 20px; padding-bottom: 25px; }
+  .news dd { font-size: 14px; }
+  .news span { font-size: 12px; top: 45px; }
+
+  .news .moreN { top: 3px; right: 10px; }
 }

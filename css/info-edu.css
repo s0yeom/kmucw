@@ -66,10 +66,10 @@
 
 
 @media screen and ( max-width: 1500px ) {
+  #infoTitle { width: 1000px; }
+
   #eduObj { width: 1000px; }
   #eduObj img.pcImg { width: 500px; height: 600px; }
-
-  #infoTitle { width: 1000px; }
 
   #eduInfo { margin-left: 70px; }
   #eduInfo h3 { font-size: 36px; top: 60px; }
@@ -137,7 +137,11 @@
 
 
 @media screen and (max-width: 730px) {
-  #eduObj { width: 500px; margin: 30px auto 650px; }
+  #infoTitle { width: 100%; }
+
+  /* .mImg { width: 400px; } */
+
+  #eduObj { width: 100%; margin: 30px auto 650px; }
 
   .circle { left: calc(50% - 210px); bottom: -500px; }
   .circle ul li { width: 100px; height: 100px; margin: 0 20px; }
