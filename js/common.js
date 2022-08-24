@@ -49,7 +49,9 @@ let eduSliderAuto = function() {
     $("#educationObj").animate({ marginLeft: "-=100%" });
   }
 }
-setInterval(eduSliderAuto, 5000);
+let timerEdu = setInterval(_.throttle(function() {
+              eduSliderAuto();
+            }, 5000), 5000)
 
 $(".cBtn").on("click", function(e) {
   e.preventDefault();
@@ -84,4 +86,6 @@ let mainChange = function() {
                                                       .css({ opacity: 0 });
                             });
 }
-setInterval(mainChange, 7000);
+let timerMain = setInterval(_.throttle(function(e) {
+                  mainChange();
+                }, 7000), 7000);
