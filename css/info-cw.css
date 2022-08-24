@@ -38,12 +38,15 @@
 
 .infoBg { width: 1310px; height: 300px; margin: 0 auto 100px;
           background: url(../images/subBg.png) no-repeat center / 100%; }
-.infoBg span { position: absolute; left: -9999px; }
+.infoBg span.hTitle { position: absolute; left: -9999px; }
+
+#infoHistory { display: none; }
 
 #infoWrap2 { width: 100%; margin: 50px auto 200px; }
 #infoWrap2 p { margin: 10px 0 0; }
 
-.pcImg2 { width: 100%; }
+.pcImg2 { width: 100%; height: 300px;
+          background: url(../images/subCw2.png) no-repeat center / cover; }
 
 .cwInfo2 { width: 55%; margin: 100px auto 0; }
 
@@ -64,16 +67,19 @@
 
   #infoWrap1 { margin: 80px auto 0; }
 
-  .cwInfo1 { margin: 80px auto 0; }
+  .cwInfo1 { margin: 60px auto 0; }
   .cwInfo1 h3 { font-size: 36px; }
+  .cwInfo1 h3::after { width: 12px; height: 12px; }
   .cwInfo1 p { font-size: 15px; }
 
   .pcImg1 { width: 700px; height: 400px; }
 
-  .infoBg { width: 1050px; margin: 0 auto; }
+  .infoBg { width: 1050px; margin: 50px auto; }
 
   #infoWrap2 { width: 100%; margin: 50px auto 150px; }
   #infoWrap2 p { font-size: 15px; }
+
+  .pcImg2 { height: 280px; }
 
   .cwInfo2 { width: 55%; margin: 80px auto 0; }
 
@@ -82,6 +88,9 @@
 
 
 @media screen and (max-width: 1200px) {
+  .pcImg1 { display: none; }
+  .mImg { display: block; }
+
   #infoTitleBg { height: 200px; }
   #infoTitleBg h2 { line-height: 200px; font-size: 48px; }
 
@@ -90,7 +99,20 @@
   #infoList { top: 60px; left: calc(50% - 220px); width: 440px; }
   #infoList li a { font-size: 18px; color: #000; }
 
+  #infoWrap1 { margin: 50px auto 0; }
+
+  #cwWrap { flex-flow: column; width: 800px; margin: 0 auto; }
+
+  .cwInfo1 { width: 85%; }
+  .cwInfo1 h3 { margin-bottom: 40px; }
+  .cwInfo1 p { margin: 0 0 20px; }
+
   .infoBg { width: 900px; }
+
+  .pcImg2 { height: 250px; }
+
+  .cwInfo2 { width: 600px; }
+  .cwInfo3 { width: 600px; }
 
 }
 
@@ -100,6 +122,20 @@
 
   #infoList { width: 360px; left: calc(50% - 180px); }
   #infoList li { margin: 0 20px; }
+
+  #cwWrap { width: 600px; }
+
+  .cwInfo1 h3 { width: 100%; text-align: center; font-size: 30px; }
+  .cwInfo1 p { font-size: 14px; }
+
+  .infoBg { width: 90%; margin: 0 auto 50px; }
+
+  #infoWrap2 p { font-size: 14px; }
+
+  .pcImg2 { height: 200px; }
+
+  .cwInfo2 { width: 550px; }
+  .cwInfo3 { width: 550px; }
 }
 
 
@@ -107,10 +143,36 @@
   #infoTitle { width: 100%; }
 
   #infoList li a { font-size: 16px; }
+
+  #cwWrap { width: 75%; }
+  .cwInfo1 { width: 90%; }
+
+  .infoBg { background-image: none;
+            width: 65%; margin: 80px auto; }
+
+  #infoHistory { display: block; }
+  #infoHistory li { line-height: 40px; font-size: 14px; }
+  #infoHistory li span.history { color: #888; }
+  #infoHistory li::before { content: "● "; color: #d30f70; font-size: 10px; }
+  #infoHistory li:nth-child(2n)::before { color: #000; }
+
+  #infoWrap2 { }
+
+  .cwInfo2 { width: 80%; }
+  .cwInfo3 { width: 80%; }
 }
 
 
 @media screen and (max-width: 500px) {
   #infoList { width: 100%; left: 0; justify-content: space-evenly; }
+
+  .cwInfo1 h3 { font-size: 28px; }
+
+  #infoHistory li { line-height: 30px; font-size: 12px; }
+  #infoHistory li::before { font-size: 6px; }
+
+  .infoBg { margin: 60px auto 80px; }
+
+  .pcImg2 { height: 150px; }
 
 }

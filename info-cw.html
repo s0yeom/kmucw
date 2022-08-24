@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/info-cw.css">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/jquery-migrate-1.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.js"></script>
     <script src="js/common.js" defer></script>
-    <!-- <script src="js/sub.js" defer></script> -->
   </head>
   <body>
     <div id="headerWrap">
@@ -31,7 +31,7 @@
             <ul class="snb">
               <li><a href="info-cw.html">문예창작학과</a></li>
               <li><a href="info-edu.html">교육목표</a></li>
-              <li><a href="#">오시는길</a></li>
+              <li><a href="info-map.html">오시는길</a></li>
             </ul>
           </li>
           <li><a href="#">교수진</a></li>
@@ -74,7 +74,7 @@
           <ul id="infoList">
             <li><a href="info-cw.html" class="on">문예창작학과</a></li>
             <li><a href="info-edu.html">교육목표</a></li>
-            <li><a href="#">오시는길</a></li>
+            <li><a href="info-map.html">오시는길</a></li>
           </ul>
         </div>
         <section id="infoWrap1">
@@ -86,16 +86,23 @@
               <p>수업은 이론 강좌를 제외한 모든 창작 강의를 토의식으로 진행하며, 학생들의 작품에 대한 토론과 합평을 중점적으로 실시해 학생들의 창작 의욕을 고무하고 문학성에 대한 안목을 높여 폭넓은 사고를 할 수 있도록 돕는다.</p>
               <p>최근에는 시각예술 및 실용음악 분양의 학과와 연계하여 21세기의 미래지향적이고 창의력 있는 인재를 양성하기 위한 융복합 교육 프로그램을 제공하고 있다.</p>
             </div>
-            <img class="pcImg pcImg1" src="images/subCw1.png" alt="계명대학교 문예창작학과 건물 내부 전경">
-            <img class="mImg" src="" alt="계명대학교 문예창작학과 건물 내부 전경">
+            <img class="pcImg1" src="images/subCw1.png" alt="계명대학교 문예창작학과 건물 내부 전경">
+            <img class="mImg" src="images/subCwM.png" alt="계명대학교 문예창작학과 건물 내부 전경">
           </div>
         </section>
         <div class="infoBg">
-          <span>계명대학교 연혁</span>
+          <span class="hTitle">계명대학교 연혁</span>
+          <ul id="infoHistory">
+            <li><span class="history">1999년</span> 어문학부 문예창작학 전공 신설</li>
+            <li><span class="history">2002년</span> 대학원 문예창작학과 석사과정 개설</li>
+            <li><span class="history">2003년</span> 인문대학 문예창작학과로 명칭 변경</li>
+            <li><span class="history">2007년</span> 대학원 문예창작학과 박사과정 개설</li>
+            <li><span class="history">2016년</span> 인문국제대학에서 Artech College로 단과대학 소속 변경</li>
+          </ul>
         </div>
         <section id="infoWrap2">
-          <img class="pcImg pcImg2" src="images/subCw2.png" alt="계명대학교 문예창작학과 강의실 내부 전경">
-          <img class="mImg" src="images/subCw2.png" alt="계명대학교 문예창작학과 강의실 내부 전경">
+          <h4 class="hidden">학과 주요 활동</h4>
+          <div class="pcImg2"></div>
           <div class="cwInfo2">
             <p>본 학과는 정기적으로 국내 정상급 문학 예술 전문가를 초청하여 '문학예술 포럼'을 개최함으로써 국내 첨단의 문화예술 동향을 제공하고 있다.</p>
             <p>아울러 매년 문학기행을 통해 명작이 탄생한 배경을 직접 확인하고 작가와 작품에 대한 이해의 기회를 가지며, 매 학기 취업특강을 마련하여 현장에서 활동 중인 선배들의 목소리를 통해 실무적 감각을 익힌다.</p>

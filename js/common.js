@@ -1,6 +1,6 @@
-// $("a").on("click", function(e) {
-//   e.preventDefault();
-// })
+$("#gnbList > li > a").on("click", function(e) {
+  e.preventDefault();
+})
 
 let mobileNav = window.matchMedia('screen and (max-width: 1500px)')
 let pcNav = window.matchMedia('screen and (min-width: 1501px)')
@@ -49,7 +49,7 @@ let eduSliderAuto = function() {
     $("#educationObj").animate({ marginLeft: "-=100%" });
   }
 }
-let timerEdu = setInterval(_.throttle(function() {
+let timerEdu = setInterval(_.throttle(function(e) {
               eduSliderAuto();
             }, 5000), 5000)
 
